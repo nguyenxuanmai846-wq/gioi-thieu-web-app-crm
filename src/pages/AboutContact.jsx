@@ -294,18 +294,33 @@ export default function AboutContact({ onOpenDemo }) {
             <div className="p-4 rounded-2xl bg-white border border-slate-200 flex items-start gap-3 shadow-xs">
               <MapPin className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
               <div>
-                <strong className="block text-slate-900 font-bold mb-0.5 font-display">Văn phòng Đại diện:</strong>
-                <p className="text-xs text-slate-600">Tòa nhà Công nghệ, Cầu Giấy, Hà Nội</p>
-                <p className="text-xs text-slate-600">Chi nhánh: Quận 1, TP. Hồ Chí Minh</p>
+                <strong className="block text-slate-900 font-bold mb-0.5 font-display">Văn phòng / Trụ sở:</strong>
+                <p className="text-xs text-slate-600">{siteConfig.address}</p>
               </div>
             </div>
 
             <div className="p-4 rounded-2xl bg-white border border-slate-200 flex items-start gap-3 shadow-xs">
               <Phone className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
               <div>
-                <strong className="block text-slate-900 font-bold mb-0.5 font-display">Tổng đài Hỗ trợ 24/7:</strong>
-                <p className="text-xs text-slate-600">Hotline: 1900 888 668 (Miễn phí cuộc gọi)</p>
-                <p className="text-xs text-slate-600">Kỹ thuật SLA: 0912 345 678</p>
+                <strong className="block text-slate-900 font-bold mb-0.5 font-display">Tổng đài &amp; Hotline:</strong>
+                <p className="text-xs text-slate-600">
+                  Hotline:{' '}
+                  <a href={`tel:${siteConfig.zaloPhone}`} className="text-indigo-600 font-semibold hover:underline">
+                    {siteConfig.hotline}
+                  </a>{' '}
+                  (Hỗ trợ 24/7)
+                </p>
+                <p className="text-xs text-slate-600">
+                  Zalo tư vấn:{' '}
+                  <a
+                    href={`https://zalo.me/${siteConfig.zaloPhone}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-600 font-semibold hover:underline"
+                  >
+                    {siteConfig.phone}
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -313,8 +328,11 @@ export default function AboutContact({ onOpenDemo }) {
               <Mail className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
               <div>
                 <strong className="block text-slate-900 font-bold mb-0.5 font-display">Hòm thư Điện tử:</strong>
-                <p className="text-xs text-slate-600">Tư vấn báo giá: contact@webappcrm.vn</p>
-                <p className="text-xs text-slate-600">Hợp tác &amp; Đối tác: partner@webappcrm.vn</p>
+                <p className="text-xs text-slate-600">
+                  <a href={`mailto:${siteConfig.email}`} className="text-indigo-600 font-semibold hover:underline">
+                    {siteConfig.email}
+                  </a>
+                </p>
               </div>
             </div>
           </div>

@@ -125,15 +125,19 @@ export default function Footer({ onOpenDemo }) {
             <div className="space-y-2 text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-indigo-400 shrink-0" />
-                <span>Hà Nội &amp; TP. Hồ Chí Minh, Việt Nam</span>
+                <span>{siteConfig.address}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-indigo-400 shrink-0" />
-                <span>Hotline: 1900 888 668 (Hỗ trợ 24/7)</span>
+                <a href={`tel:${siteConfig.zaloPhone}`} className="hover:text-white transition-colors">
+                  Hotline: {siteConfig.hotline} (Hỗ trợ 24/7)
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-indigo-400 shrink-0" />
-                <span>Email: contact@webappcrm.vn</span>
+                <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors">
+                  Email: {siteConfig.email}
+                </a>
               </div>
             </div>
 

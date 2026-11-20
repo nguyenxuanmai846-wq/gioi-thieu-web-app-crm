@@ -319,7 +319,7 @@ export default function DemoModal({ isOpen, onClose, initialTier = 'Gói Nâng c
                   <p className="text-xs text-slate-500">
                     Muốn xem thử hệ thống ngay?{' '}
                     <a
-                      href="https://ai-crm-cua-chong-ngap.onrender.com"
+                      href={siteConfig.webAppUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-indigo-600 font-semibold hover:underline inline-flex items-center gap-0.5"

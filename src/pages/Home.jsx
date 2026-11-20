@@ -283,7 +283,7 @@ export default function Home({ onOpenDemo }) {
                     <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Dữ liệu mã hóa
                   </span>
                   <a
-                    href="https://ai-crm-cua-chong-ngap.onrender.com"
+                    href={siteConfig.webAppUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-indigo-600 font-semibold hover:underline"

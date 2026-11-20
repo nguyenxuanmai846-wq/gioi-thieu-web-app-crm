@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { blogCategories, blogPosts, quickGuides } from '../data/blogData';
 import SEO from '../components/SEO';
+import siteConfig from '../config/siteConfig';
 
 export default function Resources({ onOpenDemo }) {
   const [selectedCategory, setSelectedCategory] = useState('Tất cả');
@@ -253,7 +254,7 @@ export default function Resources({ onOpenDemo }) {
                 </p>
                 <div className="pt-2 flex flex-wrap gap-2">
                   <a
-                    href="https://ai-crm-cua-chong-ngap.onrender.com"
+                    href={siteConfig.webAppUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 rounded-xl bg-indigo-600 text-white font-bold text-xs hover:bg-indigo-700 transition-colors"
