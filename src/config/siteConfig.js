@@ -17,7 +17,7 @@ export const siteConfig = {
 
   // 4. Mã đo lường chuyển đổi Google Analytics 4 (GA4)
   // Thay mã "G-XXXXXXXXXX" của bạn để theo dõi click Zalo, nộp Lead, báo giá, đăng nhập
-  ga4MeasurementId: "G-XXXXXXXXXX",
+  ga4MeasurementId: "G-TH1JNRHMGC",
 
   // 5. Tên miền chính thức của website để làm Technical SEO & Open Graph Social Share
   siteUrl: "https://gioi-thieu-web-app-crm.vercel.app",
@@ -25,12 +25,13 @@ export const siteConfig = {
   // 6. Cấu hình Firebase Authentication (Google Sign-In)
   // Tạo project tại https://console.firebase.google.com -> Enable Google Sign-In -> Dán config vào đây
   firebaseConfig: {
-    apiKey: "",
-    authDomain: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: "",
-    appId: ""
+    apiKey: "AIzaSyBZFv2MgJG4nfPDMpEQoPNTp391Em8Mzh8",
+    authDomain: "web-app-crm-31857.firebaseapp.com",
+    projectId: "web-app-crm-31857",
+    storageBucket: "web-app-crm-31857.firebasestorage.app",
+    messagingSenderId: "508247272661",
+    appId: "1:508247272661:web:7ea716585ac218d46e465c",
+    measurementId: "G-TH1JNRHMGC"
   }
 };
 
