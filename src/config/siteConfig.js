@@ -6,11 +6,11 @@
 export const siteConfig = {
   // 1. Kênh tư vấn bán hàng trực tiếp (Zalo cá nhân / Zalo OA)
   // THAY SĐT SALE THẬT VÀO ĐÂY (định dạng 10 số, ví dụ "0912345678"):
-  zaloPhone: "0900000000",
+  zaloPhone: "0924007269",
 
   // 2. Web3Forms Access Key để nhận Lead thông tin khách gửi thẳng về Email công ty
   // Lấy mã miễn phí tại https://web3forms.com (nếu để trống, hệ thống chạy chế độ mô phỏng mượt mà)
-  web3formsAccessKey: "",
+  web3formsAccessKey: "86766a21-491d-43e5-b14d-bff737f2193b",
 
   // 3. Đường dẫn Web App CRM thực tế trên Cloud (Render / Server sản xuất)
   webAppUrl: "https://ai-crm-cua-chong-ngap.onrender.com",
