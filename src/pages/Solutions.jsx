@@ -5,6 +5,7 @@ import {
   ArrowRight, Sparkles, TrendingUp, Layers, ShieldCheck, ChevronRight
 } from 'lucide-react';
 import { scaleSegments, industrySolutions } from '../data/solutionsData';
+import SEO from '../components/SEO';
 
 export default function Solutions({ onOpenDemo }) {
   const [activeIndustry, setActiveIndustry] = useState(industrySolutions[0].id);
@@ -21,6 +22,13 @@ export default function Solutions({ onOpenDemo }) {
 
   return (
     <div className="py-12 md:py-20 space-y-16 md:space-y-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Technical SEO */}
+      <SEO 
+        title="Giải pháp theo Ngành & Quy mô Doanh nghiệp" 
+        description="Giải pháp Web App CRM chuyên biệt cho B2B: Phân phối & Bán sỉ, Dịch vụ Doanh nghiệp, Đào tạo B2B và Sản xuất Kỹ thuật." 
+        path="/giai-phap" 
+      />
+
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-xs font-bold text-indigo-700">

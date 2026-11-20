@@ -3,6 +3,10 @@ import {
   Building, MapPin, Phone, Mail, Clock, ShieldCheck, 
   Sparkles, CheckCircle2, ArrowRight, Lock, Target, Award, Users 
 } from 'lucide-react';
+import siteConfig from '../config/siteConfig';
+import { submitLead } from '../utils/leadService';
+import { trackEvent } from '../utils/analytics';
+import SEO from '../components/SEO';
 
 export default function AboutContact({ onOpenDemo }) {
   const [activeTab, setActiveTab] = useState('vision');
@@ -17,14 +21,29 @@ export default function AboutContact({ onOpenDemo }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API registration call (0.6s)
-    setTimeout(() => {
+    try {
+      await submitLead({
+        name: contactForm.name,
+        phone: contactForm.phone,
+        email: contactForm.email,
+        company: contactForm.company,
+        message: contactForm.message,
+        planTier: 'Liên hệ & Khảo sát bài toán',
+        formName: 'AboutContact Form'
+      });
+      trackEvent('submit_lead_form', {
+        form_name: 'AboutContact Form',
+        company: contactForm.company
+      });
+    } catch (err) {
+      console.error('Contact submit error:', err);
+    } finally {
       setIsSubmitting(false);
       setSubmitted(true);
-    }, 600);
+    }
   };
 
   const handleReset = () => {
@@ -99,6 +118,13 @@ export default function AboutContact({ onOpenDemo }) {
 
   return (
     <div className="py-12 md:py-20 space-y-16 md:space-y-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Technical SEO */}
+      <SEO 
+        title="Giới thiệu & Liên hệ Khảo sát Bài toán CRM" 
+        description="Liên hệ đội ngũ chuyên gia Web App CRM để nhận tư vấn 1:1 và cấp tài khoản dùng thử hệ thống trong vòng 5 phút." 
+        path="/lien-he" 
+      />
+
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-xs font-bold text-indigo-700">
@@ -326,7 +352,7 @@ export default function AboutContact({ onOpenDemo }) {
                   Gửi thêm yêu cầu khác
                 </button>
                 <a
-                  href="https://ai-crm-cua-chong-ngap.onrender.com"
+                  href={siteConfig.webAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold shadow-md hover:opacity-95"

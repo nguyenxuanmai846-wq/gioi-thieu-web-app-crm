@@ -9,6 +9,10 @@ import { DashboardMockup, AISnapshotMockup, SecurityMockup } from '../components
 import { metricsData, painPoints } from '../data/featuresData';
 import { homeFaqs, testimonials } from '../data/faqData';
 import { blogPosts } from '../data/blogData';
+import siteConfig from '../config/siteConfig';
+import { submitLead } from '../utils/leadService';
+import { trackEvent } from '../utils/analytics';
+import SEO from '../components/SEO';
 
 export default function Home({ onOpenDemo }) {
   const [openFaq, setOpenFaq] = useState(0);
@@ -16,13 +20,27 @@ export default function Home({ onOpenDemo }) {
   const [isQuickSubmitting, setIsQuickSubmitting] = useState(false);
   const [quickSubmitted, setQuickSubmitted] = useState(false);
 
-  const handleQuickSubmit = (e) => {
+  const handleQuickSubmit = async (e) => {
     e.preventDefault();
     setIsQuickSubmitting(true);
-    setTimeout(() => {
+    try {
+      await submitLead({
+        name: quickForm.name,
+        phone: quickForm.phone,
+        company: quickForm.company,
+        planTier: 'Tư vấn nhanh Trang chủ',
+        formName: 'Home Quick Form'
+      });
+      trackEvent('submit_lead_form', {
+        form_name: 'Home Quick Form',
+        company: quickForm.company
+      });
+    } catch (err) {
+      console.error('Quick submit error:', err);
+    } finally {
       setIsQuickSubmitting(false);
       setQuickSubmitted(true);
-    }, 600);
+    }
   };
 
   const handleQuickReset = () => {
@@ -42,6 +60,12 @@ export default function Home({ onOpenDemo }) {
 
   return (
     <div className="space-y-16 md:space-y-24">
+      {/* Technical SEO */}
+      <SEO 
+        title="Trang chủ - Phần mềm Quản trị Quan hệ Khách hàng B2B" 
+        path="/" 
+      />
+
       {/* 1. HERO SECTION */}
       <section className="relative pt-4 sm:pt-6 pb-12 sm:pb-16 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-100">
         {/* Glow ambient background circles */}
@@ -102,7 +126,7 @@ export default function Home({ onOpenDemo }) {
               </button>
 
               <a
-                href="https://ai-crm-cua-chong-ngap.onrender.com"
+                href={siteConfig.webAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3.5 sm:py-4 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm sm:text-base border-2 border-slate-200 hover:border-indigo-400 shadow-sm transition-all duration-200 hover:-translate-y-0.5 flex items-center justify-center gap-2"
@@ -704,7 +728,7 @@ export default function Home({ onOpenDemo }) {
               </button>
 
               <a
-                href="https://ai-crm-cua-chong-ngap.onrender.com"
+                href={siteConfig.webAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-sm backdrop-blur-sm border border-white/30 transition-all duration-200 hover:-translate-y-0.5 flex items-center justify-center gap-2"

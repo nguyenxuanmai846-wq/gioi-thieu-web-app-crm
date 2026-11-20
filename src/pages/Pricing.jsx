@@ -5,6 +5,8 @@ import {
   Layers, Lock, MessageSquare, PhoneCall, Bot, CheckCircle2 
 } from 'lucide-react';
 import { scaleOptions, pricingPlans, onboardingProcess } from '../data/pricingData';
+import SEO from '../components/SEO';
+import { trackEvent } from '../utils/analytics';
 
 export default function Pricing({ onOpenDemo }) {
   const [selectedScale, setSelectedScale] = useState('10-50');
@@ -20,6 +22,13 @@ export default function Pricing({ onOpenDemo }) {
 
   return (
     <div className="py-12 md:py-20 space-y-16 md:space-y-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Technical SEO */}
+      <SEO 
+        title="Bảng giá Gói Dịch vụ & Quy trình Triển khai" 
+        description="Báo giá minh bạch theo quy mô nhân sự: Gói Cơ bản, Gói Nâng cao tích hợp AI và Gói Doanh nghiệp May đo." 
+        path="/bang-gia" 
+      />
+
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-xs font-bold text-indigo-700">
@@ -183,7 +192,10 @@ export default function Pricing({ onOpenDemo }) {
               {/* Bottom CTA Button */}
               <div className="pt-6 mt-6 border-t border-slate-100">
                 <button
-                  onClick={() => onOpenDemo(plan.name)}
+                  onClick={() => {
+                    trackEvent('click_pricing_cta', { plan_name: plan.name, plan_id: plan.id });
+                    onOpenDemo(plan.name);
+                  }}
                   className={`w-full py-3.5 px-4 rounded-xl font-bold text-xs flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer ${plan.buttonVariant === 'gradient' ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-md shadow-indigo-600/30 hover:opacity-95' : 'bg-slate-900 hover:bg-slate-800 text-white shadow-sm'}`}
                 >
                   <span>{plan.buttonText}</span>

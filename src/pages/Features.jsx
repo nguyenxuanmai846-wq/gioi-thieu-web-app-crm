@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { featuresPillars } from '../data/featuresData';
 import { DashboardMockup, AISnapshotMockup, SecurityMockup, OmnichannelMockup } from '../components/UIMockups';
+import SEO from '../components/SEO';
 
 export default function Features({ onOpenDemo }) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -27,6 +28,13 @@ export default function Features({ onOpenDemo }) {
 
   return (
     <div className="py-10 sm:py-16 space-y-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Technical SEO */}
+      <SEO 
+        title="Tính năng Chuyên sâu P1, P2, P3" 
+        description="Hệ thống tính năng CRM B2B: Customer 360, Phễu bán hàng 6 giai đoạn, Trợ lý AI Snapshot và Bảo mật mặt nạ số Zero-Phone." 
+        path="/tinh-nang" 
+      />
+
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-xs font-bold text-indigo-700">

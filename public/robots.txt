@@ -1,0 +1,6 @@
+# Robots.txt for Web App CRM
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://gioi-thieu-web-app-crm.vercel.app/sitemap.xml

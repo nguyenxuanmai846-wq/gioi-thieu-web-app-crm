@@ -5,6 +5,7 @@ import {
   Search, CheckCircle2, X, ChevronRight, Share2 
 } from 'lucide-react';
 import { blogCategories, blogPosts, quickGuides } from '../data/blogData';
+import SEO from '../components/SEO';
 
 export default function Resources({ onOpenDemo }) {
   const [selectedCategory, setSelectedCategory] = useState('Tất cả');
@@ -30,6 +31,13 @@ export default function Resources({ onOpenDemo }) {
 
   return (
     <div className="py-12 md:py-20 space-y-16 md:space-y-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Technical SEO */}
+      <SEO 
+        title="Tài nguyên, Cẩm nang & Kiến thức CRM B2B" 
+        description="Chia sẻ kinh nghiệm thực chiến chuẩn hóa phễu bán hàng, ứng dụng AI tóm tắt hội thoại và tuân thủ Luật bảo vệ dữ liệu cá nhân 91/2025/QH15." 
+        path="/kien-thuc" 
+      />
+
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-xs font-bold text-indigo-700">

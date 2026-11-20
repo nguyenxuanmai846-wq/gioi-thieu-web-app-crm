@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import { ShieldCheck, Lock, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
+import siteConfig from '../config/siteConfig';
 
 export default function Footer({ onOpenDemo }) {
   return (
@@ -138,7 +139,7 @@ export default function Footer({ onOpenDemo }) {
 
             <div className="pt-2 flex flex-col gap-2">
               <a
-                href="https://ai-crm-cua-chong-ngap.onrender.com"
+                href={siteConfig.webAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition-all duration-200 hover:-translate-y-0.5 border border-slate-700"

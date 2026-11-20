@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { X, CheckCircle2, ShieldCheck, Sparkles, Lock, ArrowRight, Building, Mail, Phone, User, Users } from 'lucide-react';
+import siteConfig from '../config/siteConfig';
+import { submitLead } from '../utils/leadService';
+import { trackEvent } from '../utils/analytics';
 
 export default function DemoModal({ isOpen, onClose, initialTier = 'Gói Nâng cao (Có AI)' }) {
   const [formData, setFormData] = useState({
@@ -23,14 +26,31 @@ export default function DemoModal({ isOpen, onClose, initialTier = 'Gói Nâng c
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API registration call (0.6s)
-    setTimeout(() => {
+    try {
+      await submitLead({
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        company: formData.company,
+        scale: formData.scale,
+        planTier: initialTier,
+        formName: 'DemoModal Popup'
+      });
+      trackEvent('submit_lead_form', {
+        form_name: 'DemoModal Popup',
+        plan_tier: initialTier,
+        company: formData.company,
+        scale: formData.scale
+      });
+    } catch (err) {
+      console.error('Submit lead error:', err);
+    } finally {
       setIsSubmitting(false);
       setSubmitted(true);
-    }, 600);
+    }
   };
 
   const handleReset = () => {
@@ -135,7 +155,7 @@ export default function DemoModal({ isOpen, onClose, initialTier = 'Gói Nâng c
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center">
                 <a
-                  href="https://ai-crm-cua-chong-ngap.onrender.com"
+                  href={siteConfig.webAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-xs hover:opacity-95 shadow-md hover:-translate-y-0.5 transition-all"
