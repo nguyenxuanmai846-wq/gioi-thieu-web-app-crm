@@ -184,7 +184,7 @@ export default function Home({ onOpenDemo }) {
                         placeholder="Nguyễn Văn A"
                         value={quickForm.name}
                         onChange={(e) => setQuickForm({ ...quickForm, name: e.target.value })}
-                        className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-3 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       />
                     </div>
 
@@ -198,7 +198,7 @@ export default function Home({ onOpenDemo }) {
                         placeholder="0912 345 678"
                         value={quickForm.phone}
                         onChange={(e) => setQuickForm({ ...quickForm, phone: e.target.value })}
-                        className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-3 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       />
                     </div>
 
@@ -212,7 +212,7 @@ export default function Home({ onOpenDemo }) {
                         placeholder="Tập đoàn / Công ty..."
                         value={quickForm.company}
                         onChange={(e) => setQuickForm({ ...quickForm, company: e.target.value })}
-                        className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-3 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       />
                     </div>
 

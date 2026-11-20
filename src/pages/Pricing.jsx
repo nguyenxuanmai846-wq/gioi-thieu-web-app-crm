@@ -89,7 +89,7 @@ export default function Pricing({ onOpenDemo }) {
               {plan.isPopular && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-xs font-extrabold shadow-md flex items-center gap-1">
                   <Sparkles className="w-3.5 h-3.5 fill-slate-950" />
-                  <span>Khuyên dùng cho Doanh nghiệp</span>
+                  <span>★ Khuyên dùng cho Doanh nghiệp</span>
                 </div>
               )}
 
@@ -97,11 +97,12 @@ export default function Pricing({ onOpenDemo }) {
                 {/* Card Title & Target */}
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold border ${plan.badgeColor}`}>
-                      {plan.badge}
-                    </span>
-                    {plan.isPopular && (
-                      <span className="text-[11px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-md">
+                    {!plan.isPopular ? (
+                      <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold border ${plan.badgeColor}`}>
+                        {plan.badge}
+                      </span>
+                    ) : (
+                      <span className="text-[11px] font-bold text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-md border border-indigo-100">
                         Bao gồm AI Snapshot
                       </span>
                     )}

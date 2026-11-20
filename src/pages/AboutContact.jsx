@@ -359,7 +359,7 @@ export default function AboutContact({ onOpenDemo }) {
                       placeholder="Ví dụ: Trần Văn Long"
                       value={contactForm.name}
                       onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                      className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-3.5 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     />
                   </div>
 
@@ -373,7 +373,7 @@ export default function AboutContact({ onOpenDemo }) {
                       placeholder="0988 123 456"
                       value={contactForm.phone}
                       onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
-                      className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-3.5 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     />
                   </div>
                 </div>
@@ -389,7 +389,7 @@ export default function AboutContact({ onOpenDemo }) {
                       placeholder="long.tran@congty.com"
                       value={contactForm.email}
                       onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                      className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-3.5 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     />
                   </div>
 
@@ -403,7 +403,7 @@ export default function AboutContact({ onOpenDemo }) {
                       placeholder="Công ty CP... (~20 nhân sự)"
                       value={contactForm.company}
                       onChange={(e) => setContactForm({ ...contactForm, company: e.target.value })}
-                      className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-3.5 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     />
                   </div>
                 </div>
@@ -417,7 +417,7 @@ export default function AboutContact({ onOpenDemo }) {
                     placeholder="Ví dụ: Cần phễu bán hàng cho đội 15 sales ngành kỹ thuật, muốn tóm tắt cuộc gọi bằng AI..."
                     value={contactForm.message}
                     onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                    className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-3.5 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   />
                 </div>
 

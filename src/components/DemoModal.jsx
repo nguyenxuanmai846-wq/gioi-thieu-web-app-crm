@@ -175,7 +175,7 @@ export default function DemoModal({ isOpen, onClose, initialTier = 'Gói Nâng c
                       placeholder="Nguyễn Văn A"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                      className="w-full pl-9 pr-3 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -194,7 +194,7 @@ export default function DemoModal({ isOpen, onClose, initialTier = 'Gói Nâng c
                         placeholder="0912 345 678"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        className="w-full pl-9 pr-3 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -211,7 +211,7 @@ export default function DemoModal({ isOpen, onClose, initialTier = 'Gói Nâng c
                         placeholder="ten@congty.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        className="w-full pl-9 pr-3 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -231,7 +231,7 @@ export default function DemoModal({ isOpen, onClose, initialTier = 'Gói Nâng c
                         placeholder="Công ty TNHH Giải Pháp Việt"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        className="w-full pl-9 pr-3 py-2 text-base sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -245,7 +245,7 @@ export default function DemoModal({ isOpen, onClose, initialTier = 'Gói Nâng c
                       <select
                         value={formData.scale}
                         onChange={(e) => setFormData({ ...formData, scale: e.target.value })}
-                        className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        className="w-full pl-9 pr-3 py-2 text-base sm:text-sm rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                       >
                         <option value="under-10">Dưới 10 nhân sự</option>
                         <option value="10-50">10 - 50 nhân sự (Phân khúc S1)</option>

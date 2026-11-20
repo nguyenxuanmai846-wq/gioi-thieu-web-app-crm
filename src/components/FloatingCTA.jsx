@@ -33,13 +33,13 @@ export default function FloatingCTA({ onOpenDemo }) {
         <ArrowUp className="w-4 h-4" />
       </button>
 
-      {/* Floating Action Pill */}
-      <div className="flex items-center gap-2 p-1.5 rounded-full bg-slate-900/95 backdrop-blur-md shadow-2xl border border-slate-700">
+      {/* Floating Action Pill - Hidden on mobile, visible on md+ */}
+      <div className="hidden md:flex items-center gap-2 p-1.5 rounded-full bg-slate-900/95 backdrop-blur-md shadow-2xl border border-slate-700">
         <a
           href="https://ai-crm-cua-chong-ngap.onrender.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800 text-slate-200 hover:text-white text-xs font-semibold transition-colors border border-slate-700 hover:-translate-y-0.5 duration-200"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800 text-slate-200 hover:text-white text-xs font-semibold transition-colors border border-slate-700 hover:-translate-y-0.5 duration-200"
           title="Trải nghiệm Web App thực tế trên Cloud"
         >
           <span>Web App Trực tiếp</span>
