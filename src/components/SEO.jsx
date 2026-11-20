@@ -10,7 +10,7 @@ export default function SEO({
   description,
   path = '',
   ogType = 'website',
-  ogImage = '/favicon.svg'
+  ogImage = '/og-image.png'
 }) {
   const fullTitle = title 
     ? `${title} | Web App CRM`
@@ -35,6 +35,11 @@ export default function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:image:secure_url" content={fullImageUrl} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={fullTitle} />
       <meta property="og:site_name" content="Web App CRM" />
       <meta property="og:locale" content="vi_VN" />
 

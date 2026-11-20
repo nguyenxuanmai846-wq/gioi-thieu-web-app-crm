@@ -30,7 +30,7 @@ export const siteConfig = {
   ga4MeasurementId: "G-TH1JNRHMGC",
 
   // 5. Tên miền chính thức của website để làm Technical SEO & Open Graph Social Share
-  siteUrl: "https://gioi-thieu-web-app-crm.vercel.app",
+  siteUrl: "https://gioi-thieu-web-app-crm-b8qt.vercel.app",
 
   // 6. Cấu hình Firebase Authentication (Google Sign-In)
   // Tạo project tại https://console.firebase.google.com -> Enable Google Sign-In -> Dán config vào đây

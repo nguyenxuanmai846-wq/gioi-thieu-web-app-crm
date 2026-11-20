@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Index
-Sitemap: https://gioi-thieu-web-app-crm.vercel.app/sitemap.xml
+Sitemap: https://gioi-thieu-web-app-crm-b8qt.vercel.app/sitemap.xml
