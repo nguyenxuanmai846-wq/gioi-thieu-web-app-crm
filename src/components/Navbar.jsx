@@ -68,7 +68,7 @@ export default function Navbar({ onOpenDemo, currentUser, onOpenAuth, onLogout }
 
               {/* Dropdown Menu */}
               {featuresDropdownOpen && (
-                <div className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-2xl border border-slate-200/80 p-3 mt-1 animate-fadeIn">
+                <div className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-lg border border-slate-200 p-2.5 mt-1 animate-fadeIn">
                   <div className="space-y-1">
                     <Link
                       to="/tinh-nang?tab=p1"
@@ -144,7 +144,7 @@ export default function Navbar({ onOpenDemo, currentUser, onOpenAuth, onLogout }
 
               {/* Dropdown Menu */}
               {solutionsDropdownOpen && (
-                <div className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-2xl border border-slate-200/80 p-3 mt-1 animate-fadeIn">
+                <div className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-lg border border-slate-200 p-2.5 mt-1 animate-fadeIn">
                   <div className="space-y-1">
                     <Link
                       to="/giai-phap#scale"
@@ -304,7 +304,7 @@ export default function Navbar({ onOpenDemo, currentUser, onOpenAuth, onLogout }
                 {/* Try Free button triggers DemoModal */}
                 <button
                   onClick={() => onOpenDemo('Dùng thử miễn phí')}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:opacity-95 shadow-md shadow-indigo-600/25 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-amber-300" />
                   <span>Dùng thử miễn phí</span>
@@ -437,7 +437,7 @@ export default function Navbar({ onOpenDemo, currentUser, onOpenAuth, onLogout }
                 setMobileMenuOpen(false);
                 onOpenDemo('Dùng thử miễn phí');
               }}
-              className="flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white text-xs font-bold shadow-md cursor-pointer"
+              className="flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-sm cursor-pointer"
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-300" />
               <span>Dùng thử miễn phí &amp; Nhận báo giá</span>

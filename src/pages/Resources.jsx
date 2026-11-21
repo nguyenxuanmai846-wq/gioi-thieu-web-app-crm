@@ -47,7 +47,7 @@ export default function Resources({ onOpenDemo }) {
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.22] font-display">
           Cẩm nang Quản trị Khách hàng &amp;{' '}
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent inline-block pb-1">
+          <span className="text-indigo-600 inline-block pb-1">
             Chiến lược Tăng trưởng B2B
           </span>
         </h1>

@@ -7,7 +7,7 @@
     font-family: 'Be Vietnam Pro', system-ui, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif; /* impeccable-disable-line overused-font -- Brand token declared in DESIGN.md */
   }
 }
 
@@ -22,7 +22,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #E2E8F0;
   border-radius: 9999px;
 }
 
@@ -30,11 +30,9 @@
   background: #94A3B8;
 }
 
-/* Gradient text utility - used with restraint */
+/* Accent text utility - solid clean brand color per DESIGN.md */
 .text-gradient {
-  background: linear-gradient(135deg, #2563EB 0%, #4F46E5 50%, #7C3AED 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #4F46E5;
 }
 
 .bg-gradient-crm {

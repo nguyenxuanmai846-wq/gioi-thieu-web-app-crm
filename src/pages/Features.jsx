@@ -43,7 +43,7 @@ export default function Features({ onOpenDemo }) {
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
           Bộ tính năng toàn diện thiết kế cho{' '}
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <span className="text-indigo-600">
             Đội ngũ Kinh doanh B2B
           </span>
         </h1>

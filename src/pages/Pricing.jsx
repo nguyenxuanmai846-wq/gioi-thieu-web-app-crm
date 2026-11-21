@@ -37,7 +37,7 @@ export default function Pricing({ onOpenDemo }) {
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.22] font-display">
           Lựa chọn gói dịch vụ tối ưu cho{' '}
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent inline-block pb-1">
+          <span className="text-indigo-600 inline-block pb-1">
             Quy mô Đội ngũ của Bạn
           </span>
         </h1>
@@ -96,8 +96,8 @@ export default function Pricing({ onOpenDemo }) {
             >
               {/* Ribbon Badge for Popular */}
               {plan.isPopular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-xs font-extrabold shadow-md flex items-center gap-1">
-                  <Sparkles className="w-3.5 h-3.5 fill-slate-950" />
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3.5 py-0.5 rounded-full bg-amber-400 text-amber-950 text-xs font-bold shadow-xs flex items-center gap-1">
+                  <Sparkles className="w-3 h-3 fill-amber-950" />
                   <span>★ Khuyên dùng cho Doanh nghiệp</span>
                 </div>
               )}
@@ -196,7 +196,7 @@ export default function Pricing({ onOpenDemo }) {
                     trackEvent('click_pricing_cta', { plan_name: plan.name, plan_id: plan.id });
                     onOpenDemo(plan.name);
                   }}
-                  className={`w-full py-3.5 px-4 rounded-xl font-bold text-xs flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer ${plan.buttonVariant === 'gradient' ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-md shadow-indigo-600/30 hover:opacity-95' : 'bg-slate-900 hover:bg-slate-800 text-white shadow-sm'}`}
+                  className={`w-full py-3.5 px-4 rounded-xl font-bold text-xs flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer ${plan.buttonVariant === 'gradient' ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm' : 'bg-slate-900 hover:bg-slate-800 text-white shadow-xs'}`}
                 >
                   <span>{plan.buttonText}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -228,7 +228,7 @@ export default function Pricing({ onOpenDemo }) {
               className="p-5 rounded-2xl bg-slate-800/60 border border-slate-700/60 space-y-3 relative flex flex-col justify-between"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white font-extrabold text-sm flex items-center justify-center shadow-md">
+                <div className="w-9 h-9 rounded-xl bg-indigo-600 text-white font-extrabold text-sm flex items-center justify-center shadow-xs">
                   0{step.step}
                 </div>
                 <h4 className="font-bold text-white text-base font-display">

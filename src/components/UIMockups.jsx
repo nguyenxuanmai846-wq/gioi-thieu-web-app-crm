@@ -200,52 +200,50 @@ export function AISnapshotMockup() {
 
       <div className="p-4 sm:p-5 space-y-4">
         {/* Source Chat Snippet */}
-        <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80">
-          <div className="flex items-center justify-between text-[11px] text-slate-500 mb-2 font-medium">
-            <span>Đoạn trích hội thoại Zalo OA (KH-00842 - Đại diện: Anh Quân)</span>
+        <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <div className="flex items-center justify-between text-[11px] text-slate-500 mb-1.5 font-medium">
+            <span>Hội thoại thực tế qua Zalo OA (KH-00842 • Đại diện: Anh Quân)</span>
             <span>14:25 Hôm nay</span>
           </div>
-          <div className="space-y-1.5 text-xs text-slate-700">
-            <div className="p-2 rounded bg-white border border-slate-200/60">
-              <span className="font-semibold text-indigo-600">Khách hàng:</span> "Bên mình đang cần triển khai cho 35 nhân sự trước ngày 15 tháng sau. Ngân sách dự kiến khoảng 120-150 triệu trọn gói. Bạn gửi demo tính năng quản trị đa chi nhánh và báo giá qua email nhé."
-            </div>
-          </div>
+          <p className="text-xs text-slate-800 leading-relaxed">
+            <strong className="text-indigo-600 font-semibold">Khách hàng:</strong> "Bên mình đang cần triển khai cho 35 nhân sự trước ngày 15 tháng sau. Ngân sách dự kiến khoảng 120-150 triệu trọn gói. Bạn gửi demo tính năng quản trị đa chi nhánh và báo giá qua email nhé."
+          </p>
         </div>
 
         {/* AI Extracted Output */}
-        <div className="p-3.5 rounded-xl bg-indigo-50/50 border border-indigo-100 space-y-2.5">
+        <div className="pt-2 border-t border-slate-200 space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-indigo-900 flex items-center gap-1.5">
-              <Bot className="w-4 h-4 text-indigo-600" /> Kết quả bóc tách tự động (Độ tin cậy: 98%)
+            <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+              <Bot className="w-4 h-4 text-indigo-600" /> Kết quả bóc tách tự động (Độ tin cậy 98%)
             </span>
-            <span className="text-[10px] text-indigo-600 font-medium bg-white px-2 py-0.5 rounded border border-indigo-200">
+            <span className="text-[10px] text-indigo-700 font-semibold bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">
               Chờ nhân viên Sales duyệt
             </span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-            <div className="bg-white p-2 rounded-lg border border-indigo-100">
+            <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80">
               <span className="text-[11px] text-slate-500 block">Nhu cầu chính:</span>
-              <span className="font-medium text-slate-800">Triển khai CRM cho 35 người, quản lý đa chi nhánh</span>
+              <span className="font-semibold text-slate-800">Triển khai CRM cho 35 người, đa chi nhánh</span>
             </div>
-            <div className="bg-white p-2 rounded-lg border border-indigo-100">
+            <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80">
               <span className="text-[11px] text-slate-500 block">Ngân sách dự kiến:</span>
               <span className="font-bold text-emerald-600">120 - 150 Triệu VNĐ</span>
             </div>
-            <div className="bg-white p-2 rounded-lg border border-indigo-100">
+            <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80">
               <span className="text-[11px] text-slate-500 block">Thời hạn kỳ vọng (Deadline):</span>
-              <span className="font-medium text-slate-800">Trước ngày 15 tháng tới (Cấp bách)</span>
+              <span className="font-semibold text-slate-800">Trước ngày 15 tháng tới (Cấp bách)</span>
             </div>
-            <div className="bg-white p-2 rounded-lg border border-indigo-100">
+            <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80">
               <span className="text-[11px] text-slate-500 block">Hành động kế tiếp (Next Best Action):</span>
-              <span className="font-medium text-purple-700 flex items-center gap-1">
-                <Clock className="w-3 h-3" /> Gửi báo giá mẫu S1 & Hẹn lịch Demo
+              <span className="font-semibold text-indigo-700 flex items-center gap-1">
+                <Clock className="w-3 h-3" /> Gửi báo giá mẫu S1 &amp; Hẹn lịch Demo
               </span>
             </div>
           </div>
 
           {/* Action Approval Bar */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-indigo-100">
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-slate-100">
             <span className="text-[11px] text-slate-500 text-center sm:text-left">
               {approved ? '✓ Đã kiểm duyệt và cập nhật vào hồ sơ KH-00842 lúc 14:26' : 'Nhân viên kiểm tra và xác nhận trước khi lưu:'}
             </span>

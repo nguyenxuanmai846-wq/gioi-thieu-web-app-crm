@@ -133,7 +133,7 @@ export default function AboutContact({ onOpenDemo }) {
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.22] font-display">
           Sứ mệnh Kiến tạo Nền tảng CRM{' '}
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent inline-block pb-1">
+          <span className="text-indigo-600 inline-block pb-1">
             Thông minh &amp; An toàn nhất
           </span>
         </h1>

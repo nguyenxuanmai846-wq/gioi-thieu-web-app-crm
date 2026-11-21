@@ -17,12 +17,12 @@ export default function Footer({ onOpenDemo }) {
               Phần mềm B2B SaaS quản trị quan hệ khách hàng chuyên biệt. Tối ưu phễu 6 giai đoạn, tích hợp Trợ lý AI có kiểm soát và công nghệ mặt nạ Zero-Phone bảo vệ tài sản số doanh nghiệp.
             </p>
             
-            <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5">
+            <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5">
               <div className="flex items-center gap-1.5 text-xs font-bold text-white font-display">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
                 <span>Bảo mật Pháp lý Chuẩn Quốc gia</span>
               </div>
-              <p className="text-[11px] text-slate-400 leading-tight">
+              <p className="text-[11px] text-slate-300 leading-tight">
                 Tuân thủ nghiêm ngặt Luật Bảo vệ dữ liệu cá nhân số <strong>91/2025/QH15</strong> &amp; Nghị định <strong>356/2025/NĐ-CP</strong>.
               </p>
             </div>
@@ -154,7 +154,7 @@ export default function Footer({ onOpenDemo }) {
 
               <button
                 onClick={() => onOpenDemo('Tư vấn từ Footer')}
-                className="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:opacity-95 text-white text-xs font-bold transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
+                className="w-full py-2.5 px-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all duration-200 hover:-translate-y-0.5 cursor-pointer shadow-sm"
               >
                 Đăng ký Tư vấn 1:1 Miễn phí
               </button>

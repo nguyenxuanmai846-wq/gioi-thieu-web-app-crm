@@ -37,7 +37,7 @@ export default function Solutions({ onOpenDemo }) {
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.22] font-display">
           Giải pháp tối ưu theo{' '}
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent inline-block pb-1">
+          <span className="text-indigo-600 inline-block pb-1">
             Quy mô &amp; Ngành nghề
           </span>
         </h1>
@@ -257,8 +257,8 @@ export default function Solutions({ onOpenDemo }) {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {currentIndustry.metrics.map((m, i) => (
-                  <div key={i} className="p-4 rounded-xl bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 text-center">
-                    <div className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-display">
+                  <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-center">
+                    <div className="text-2xl font-extrabold text-indigo-600 font-display">
                       {m.value}
                     </div>
                     <div className="text-xs font-medium text-slate-700 mt-1">

@@ -80,7 +80,7 @@ export default function Logo({ size = 'default', isDark = false, showTagline = f
           <span className={`${textSizes[size] || textSizes.default} ${isDark ? 'text-white' : 'text-slate-900'}`}>
             Web App
           </span>
-          <span className={`${textSizes[size] || textSizes.default} bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent`}>
+          <span className={`${textSizes[size] || textSizes.default} text-indigo-600`}>
             CRM
           </span>
           <span className="hidden sm:inline-flex items-center px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200">
